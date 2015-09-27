@@ -1,5 +1,11 @@
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
 html {
     height: 100%;
+    font-size: 100%;
 }
 
 body {
@@ -8,64 +14,59 @@ body {
     min-height: 100%;
 }
 
-body.landing {
-    background-color: rgb(58,23,63);
-}
-
 .navbar {
+    position: relative;
     padding: 0.5rem;
-    background-color: rgb(101,18,95);
+    background-color: rgba(101,18,95,0.5);
+    z-index: 1;
 }
 
 .navbar .logo {
     position: relative;
     left: 2rem;
+    cursor: pointer;
 }
 
-.hero-content {
-    position: relative;
-    height: 600px;
-    background-image: url(../assets/images/bloc_jams_bg.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
-
-.hero-content .hero-title {
+.navbar .links-container {
+    display: table;
     position: absolute;
-    top: 40%;
-    -webkit-transform: translateY(-50%);
-     -moz-transform: translateY(-50%);
-     -ms-transform: translateY(-50%);
-    transform: transformY(-50%);
-    width: 100%;
-    text-align: center;
-    font-size: 4em; 
-    font font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 0.5rem;
-    text-shadow: 1px 1px 0px rgb(58,23,63);
+    top: 0;
+    right: 0;
+    height: 100px;
+    color: white;
+    text decoration: none;
 }
 
-.selling-points {
-     position: relative;
+.links-container . navbar-link {
+    display: table-cell;
+    position: relative;
+    height: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    vertical-align: middle;
+    color: white;
+    font-size: 0.625rem;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.links-containter .navbar-link: hover {
+    color: rgb(233,50,117);
+}
+    
+
+.container{ 
+    margin: 0 auto;
+    max-width: 64rem;
+}
+
+ .clearfix:before,
+ .clearfix:after {
+     content: " ";
      display: table;
-     width: 100%;
-     -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-     box-sizing: border-box; /* we'll explain this in a resource */
- }
- 
- .point {
-     display: table-cell;
-     position: relative;
-     width: 33.3%;
-     padding: 2rem;
-     text-align: center;
- }
- 
- .point .point-title {
-     font-size: 1.25rem;
  }
  
  .ion-music-note,
@@ -73,4 +74,30 @@ body.landing {
  .ion-iphone {
      color: rgb(233,50,117);
      font-size: 5rem;
+
+ .clearfix:after {
+     clear: both;
+ }
+
+/* Medium and Small screens (640px) */
+@media (min-width: 40rem) {
+    html { font-size: 112%; }
+    
+    .column {
+        float: left;
+        padding-left: 1rem;
+        padding-right: 1rem;
+}
+
+    .column.full { width: 100%; }
+    .column.two-thirds { width: 66.7%; }
+    .column.half { width: 50%; }
+    .column.fourth {width: 25%; }
+    .column.flow-opposite { float: right; }
+    
+}
+/* Large screens (1024 px) */
+@media (min-width: 64rem) {
+    html { font-size: 120% }
+}
 
