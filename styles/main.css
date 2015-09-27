@@ -34,10 +34,10 @@ body {
     right: 0;
     height: 100px;
     color: white;
-    text decoration: none;
+    text-decoration: none;
 }
 
-.links-container . navbar-link {
+.links-container .navbar-link {
     display: table-cell;
     position: relative;
     height: 100%;
@@ -53,8 +53,12 @@ body {
     cursor: pointer;
 }
 
-.links-containter .navbar-link: hover {
+.links-container .navbar-link:hover {
     color: rgb(233,50,117);
+}
+
+.links-container .navbar-link:active {
+    background-color: white;
 }
     
 
