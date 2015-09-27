@@ -14,6 +14,14 @@ body {
     min-height: 100%;
 }
 
+.ion-music-note,
+ .ion-radio-waves,
+ .ion-iphone {
+     color: rgb(233,50,117);
+     font-size: 5rem;
+
+ }
+
 .navbar {
     position: relative;
     padding: 0.5rem;
@@ -37,7 +45,7 @@ body {
     text decoration: none;
 }
 
-.links-container . navbar-link {
+.links-container .navbar-link {
     display: table-cell;
     position: relative;
     height: 100%;
@@ -53,7 +61,7 @@ body {
     cursor: pointer;
 }
 
-.links-containter .navbar-link: hover {
+.links-container .navbar-link: hover {
     color: rgb(233,50,117);
 }
     
@@ -63,21 +71,17 @@ body {
     max-width: 64rem;
 }
 
+.container.narrow {
+     max-width: 56rem;
+ }
+ 
  .clearfix:before,
  .clearfix:after {
+     clear: both;
      content: " ";
      display: table;
  }
  
- .ion-music-note,
- .ion-radio-waves,
- .ion-iphone {
-     color: rgb(233,50,117);
-     font-size: 5rem;
-
- .clearfix:after {
-     clear: both;
- }
 
 /* Medium and Small screens (640px) */
 @media (min-width: 40rem) {
