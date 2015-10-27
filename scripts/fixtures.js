@@ -1,3 +1,4 @@
+//Albums
 var albumPicasso = {
      name: 'The Colors',
      artist: 'Pablo Picasso',
